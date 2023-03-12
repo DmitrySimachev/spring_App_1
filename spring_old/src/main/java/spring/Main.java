@@ -23,6 +23,8 @@ public class Main {
          * */
         ArithmeticOperation arithmeticOperation = context.getBean("AO", ArithmeticOperation.class);
         arithmeticOperation.performOperation();
+        System.out.println(arithmeticOperation.getValue1());
+        System.out.println(arithmeticOperation.getValue2());
         context.close();
     }
 }
