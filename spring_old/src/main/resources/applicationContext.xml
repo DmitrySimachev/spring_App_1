@@ -16,13 +16,13 @@
     </bean>
 
     <bean id = "AO"
-          class="spring.ArithmeticOperation">
+          class="spring.ArithmeticOperation" scope="prototype">
         <property name="mathematicalFunction" ref="MF"/>
 
 <!--        <property name="value1" value="10"/>-->
 <!--        <property name="value2" value="20"/>-->
-        <property name="value1" value="${value1.data}"/>
-        <property name="value2" value="${value2.data}"/>
+        <property name="value11" value="${value1.data}"/>
+        <property name="value22" value="${value2.data}"/>
 
     </bean>
 

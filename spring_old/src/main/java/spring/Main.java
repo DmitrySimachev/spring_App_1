@@ -21,10 +21,21 @@ public class Main {
         /**
          * Проблема объекты создаются в ручную
          * */
-        ArithmeticOperation arithmeticOperation = context.getBean("AO", ArithmeticOperation.class);
-        arithmeticOperation.performOperation();
-        System.out.println(arithmeticOperation.getValue1());
-        System.out.println(arithmeticOperation.getValue2());
+        ArithmeticOperation arithmeticOperation1 = context.getBean("AO", ArithmeticOperation.class);
+        ArithmeticOperation arithmeticOperation2 = context.getBean("AO", ArithmeticOperation.class);
+
+        boolean bool = arithmeticOperation1 == arithmeticOperation2;
+
+        arithmeticOperation1.setValue11(10);
+        arithmeticOperation2.setValue11(20);
+
+        System.out.println(bool);
+        System.out.println(arithmeticOperation1.getValue1());
+        System.out.println(arithmeticOperation2.getValue1());
+
+//        arithmeticOperation.performOperation();
+//        System.out.println(arithmeticOperation.getValue1());
+//        System.out.println(arithmeticOperation.getValue2());
         context.close();
     }
 }

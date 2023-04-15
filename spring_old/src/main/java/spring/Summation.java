@@ -3,7 +3,7 @@ package spring;
 public class Summation implements MathematicalFunction {
 
     @Override
-    public String getFunction() {
-        return "Сложение";
+    public String getFunction(int value1, int value2) {
+        return "сложение: " + (value1 + value2);
     }
 }

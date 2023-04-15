@@ -17,11 +17,11 @@ public class ArithmeticOperation {
         this.mathematicalFunction = mathematicalFunction;
     }
 
-    public void setValue1(Integer value1) {
+    public void setValue11(Integer value1) {
         this.value1 = value1;
     }
 
-    public void setValue2(Integer value2) {
+    public void setValue22(Integer value2) {
         this.value2 = value2;
     }
 
@@ -34,6 +34,6 @@ public class ArithmeticOperation {
     }
 
     public void performOperation(){
-        System.err.println("Выполняем " + mathematicalFunction.getFunction());
+        System.err.println("Выполняем " + mathematicalFunction.getFunction(value1, value2));
     }
 }
